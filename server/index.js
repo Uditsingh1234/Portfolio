@@ -18,7 +18,7 @@ app.use(cors({
 app.use("/api/portfolio", portfolioRoute)
 
 app.get("/", (req, res) => {
-    res.json("This is the portfolio API")
+    res.json("Welcome in portfolio API")
 })
 
 
