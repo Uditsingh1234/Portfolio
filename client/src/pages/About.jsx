@@ -19,7 +19,7 @@ function About() {
             <SectionTittle title="About" />
 
             <div className="flex w-full items-center sm:flex-col mb-10 gap-3 px-8 ssm:px-0 blck">
-                <div className=' sm:w-full p-5 flex items-center justify-center ssm:p-1 mt-10 ssm:mt-0 '>
+                <div className=' sm:w-full p-5 flex items-center justify-center ssm:p-1 mt-10 ssm:mt-10 '>
                     <div className='ssm:w-full blckk gloww '><img src={lotiUrl} alt="" className='' /></div>
                 </div>
                 <div className='flex flex-col gap-5 w-1/2 sm:w-full ssm:text-center ml-5 mt-10 ssm:ml-0'>
