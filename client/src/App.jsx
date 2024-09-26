@@ -16,7 +16,7 @@ function App() {
   const getPortfolioData = async () => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.get("http://localhost:5000/api/portfolio/get-portfolio-data");
+      const response = await axios.get(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/get-portfolio-data`);
       // console.log(response.data); 
       dispatch(HideLoading());  
       dispatch(SetPortfolioData(response.data));
