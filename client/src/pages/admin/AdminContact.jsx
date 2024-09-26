@@ -51,7 +51,7 @@ function AdminContact() {
           <Input placeholder='Email Id' />
         </Form.Item>
 
-        <Form.Item name="phone" label="Phone Number">
+        <Form.Item name="mobile" label="Phone Number">
           <Input placeholder='Conatct Number' />
         </Form.Item>
 
