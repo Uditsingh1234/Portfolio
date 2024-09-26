@@ -18,12 +18,12 @@ function Experiences() {
             dispatch(ShowLoading());
             let response;
             if (selectedItemForEdit) {
-                response = await axios.put("http://localhost:5000/api/portfolio/update-experience", {
+                response = await axios.put(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/update-experience`, {
                     ...values,
                     _id: selectedItemForEdit._id,
                 });
             } else {
-                response = await axios.post("http://localhost:5000/api/portfolio/add-experience", values);
+                response = await axios.post(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/add-experience`, values);
             }
 
             dispatch(HideLoading());
@@ -48,7 +48,7 @@ function Experiences() {
             dispatch(ShowLoading());
 
             // Use DELETE method and pass _id in the data object
-            const response = await axios.delete("http://localhost:5000/api/portfolio/delete-experience", {
+            const response = await axios.delete(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/delete-experience`, {
                 data: { _id: item._id } // The _id is passed here
             });
 
