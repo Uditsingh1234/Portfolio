@@ -8,6 +8,13 @@ const portfolioRoute = require('./routes/portfolioRoute');
 
 app.use(express.json());
 
+// Middleware to allow cross-origin requests (CORS) from any origin.
+app.use(cors({
+    origin : '',
+    methods : ["POST", "GET"],
+    credentials : true  // enable setting cookies
+}))
+
 app.use("/api/portfolio", portfolioRoute)
 
 app.get("/", (req, res) => {
