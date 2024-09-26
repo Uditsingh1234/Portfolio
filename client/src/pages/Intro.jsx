@@ -16,10 +16,6 @@ function Intro() {
   };
 
 
-    const handleAdminClick = () => {
-    navigate('/admin-login');  // Navigates to the /hireme route
-  };
-
   return (
     <div className=' bg-primary flex flex-col items-start justify-center gap-8 py-10 mx-2 blck '>
       <h1 className='text-text'>{welcomeText || ''}</h1>
@@ -28,7 +24,6 @@ function Intro() {
       <p className='text-text w-2/3 sm:w-full'> {description || ''}</p>
       {/* <button className='border-2 border-tertiary text-tertiary px-10 py-3 rounded  '>Hire me</button> */}
       <button className='btn flex items-center gap-3' onClick={handleClick}>Hire me <FaChevronRight /></button>
-      <button className='btn flex items-center gap-3' onClick={handleAdminClick}>Admin <FaChevronRight /></button>
       <div className='lg:hidden sm:block sm:gap-2'><LeftSider /></div>
     </div>
   );
