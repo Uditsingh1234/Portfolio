@@ -15,7 +15,7 @@ function AdminIntro() {
     try {
       dispatch(ShowLoading());
       // Sending _id from portfolioData.intros._id instead of portfolioData.intros.id
-      const response = await axios.post("http://localhost:5000/api/portfolio/update-intro", { 
+      const response = await axios.post(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/update-intro`, { 
         ...values, 
         _id: portfolioData.intros._id // Change to _id
       });
