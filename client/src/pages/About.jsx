@@ -3,14 +3,6 @@ import SectionTittle from '../components/SectionTittle'
 import { useSelector } from 'react-redux';
 
 function About() {
-    // const skills = [
-    //     "Javascript",
-    //     "React",
-    //     "Redux",
-    //     "Node.js",
-    //     "Express.js",
-    //     "MongoDB",
-    // ]
     const { loading, portfolioData } = useSelector((state) => state.root);
     const about = portfolioData?.abouts || {};
     const { skills, lotiUrl, description1, description2 } = about;

@@ -49,7 +49,7 @@ function AdminCourse() {
             dispatch(ShowLoading());
 
             // Use DELETE method and pass _id in the data object
-            const response = await axios.delete("http://localhost:5000/api/portfolio/delete-course", {
+            const response = await axios.delete(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/delete-course`, {
                 data: { _id: item._id } // The _id is passed here
             });
 

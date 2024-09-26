@@ -48,7 +48,7 @@ function Experiences() {
             dispatch(ShowLoading());
 
             // Use DELETE method and pass _id in the data object
-            const response = await axios.delete("http://localhost:5000/api/portfolio/delete-experience", {
+            const response = await axios.delete(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/delete-experience`, {
                 data: { _id: item._id } // The _id is passed here
             });
 

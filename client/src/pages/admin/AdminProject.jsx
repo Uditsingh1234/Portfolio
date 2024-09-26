@@ -49,7 +49,7 @@ function AdminProject() {
   const onDelete = async (item) => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.delete("http://localhost:5000/api/portfolio/delete-project", {
+      const response = await axios.delete(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/delete-project`, {
         data: { _id: item._id }
       });
 

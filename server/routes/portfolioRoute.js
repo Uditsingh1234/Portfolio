@@ -94,7 +94,6 @@ router.put("/update-experience", async (req, res) => { // Corrected route spelli
 });
 
 // delete experience
-
 router.delete("/delete-experience", async (req, res) => {
     try {
         const experience = await Experience.findByIdAndDelete(req.body._id); // No need for an object inside
@@ -114,9 +113,7 @@ router.delete("/delete-experience", async (req, res) => {
     }
 });
 
-
 // add project
-
 router.post("/add-project", async (req, res) => {
     try {
       const project = new Project(req.body);
@@ -135,11 +132,8 @@ router.post("/add-project", async (req, res) => {
       });
     }
   });
-  
-
 
 //update project 
-
 router.put("/update-project", async (req, res) => {
     try {
         const project = await Project.findOneAndUpdate(
@@ -158,7 +152,6 @@ router.put("/update-project", async (req, res) => {
 });
 
 // delete project
-
 router.delete("/delete-project", async (req, res) => {
     try {
         const project = await Project.findByIdAndDelete({_id: req.body._id});
@@ -171,8 +164,6 @@ router.delete("/delete-project", async (req, res) => {
         res.status(500).send(error);
     }
 });
-
-
 
 // add course
 router.post("/add-course", async (req, res) => {
@@ -193,7 +184,6 @@ router.post("/add-course", async (req, res) => {
       });
     }
   });
-
 
 //update course
 router.put("/update-course", async (req, res) => {
@@ -243,7 +233,6 @@ router.post('/update-contact', async (req, res) => {
         res.status(500).send(error);
     }
 });
-
 
 //admin login
 router.post("/admin-login", async (req, res) => {
