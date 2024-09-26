@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Form, message, Modal } from 'antd';
 import { HideLoading, ShowLoading, ReloadData } from '../../redux/rootSlice';
 import axios from 'axios';
-import { set } from 'mongoose';
 
 function Experiences() {
     const dispatch = useDispatch();
