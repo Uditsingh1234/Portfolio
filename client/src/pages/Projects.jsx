@@ -9,8 +9,10 @@ function Projects() {
     // Set the default selected project to the first one (index 0)
     const [selectedItemIndex, setselectedItemIndex] = React.useState(0);
     const { portfolioData } = useSelector((state) => state.root);
-    const projects = portfolioData?.projects || {};
-    // const { technologies, title, description, image, discription, url } = projects;
+    let projects = portfolioData?.projects || [];
+
+    // Reverse the projects array
+    projects = projects.slice().reverse();
 
     return (
         <div className='blck'>
