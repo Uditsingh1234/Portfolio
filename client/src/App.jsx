@@ -5,7 +5,7 @@ import Loader from "./components/Loader";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { HideLoading, SetPortfolioData, ShowLoading, ReloadData } from "./redux/rootSlice";
-import Admin from "./pages/admin";
+import Admin from "./pages/admin/Admin";
 import AdminLogin from "./pages/admin/AdminLogin";
 import Hireme from "./pages/Hireme";
 
@@ -16,7 +16,7 @@ function App() {
   const getPortfolioData = async () => {
     try {
       dispatch(ShowLoading());
-      const response = await axios.get("http://localhost:5000/api/portfolio/get-portfolio-data");
+      const response = await axios.get(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/get-portfolio-data`);
       // console.log(response.data); 
       dispatch(HideLoading());  
       dispatch(SetPortfolioData(response.data));

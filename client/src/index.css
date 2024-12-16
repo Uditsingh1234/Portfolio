@@ -272,36 +272,6 @@ textarea {
   filter: blur(20px);
 }
 
-/* // name animation */
-
-/* .nameanimmation{
-  position: relative;
-  top: 40px;
-  left: 250px;
-  transform: translate(-50%, -50%);
-  animation-name: animatee;
-  animation-duration: 10s;
-  animation-direction: alternate;
-  animation-iteration-count: infinite;
-  padding: 10px;
-  text-transform: uppercase;
-}
-@keyframes animatee {
-  0%, 100%{
-    text-shadow: 0 0 30px red;
-  }
-  25%{
-    text-shadow: 0 0 30px orange;
-  }
-  50%{
-    text-shadow: 0 0 30px forestgreen;
-  }
-  75%{
-    text-shadow: 0 0 30px cyan;
-  }
-} */
-
-
 
 /* for glass effect */
 

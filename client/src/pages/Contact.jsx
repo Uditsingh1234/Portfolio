@@ -1,6 +1,8 @@
 import React from 'react';
 import SectionTittle from '../components/SectionTittle';
 import { useSelector } from 'react-redux';
+import Google_srch from './Google_srch';
+import Rough from './Rough';
 
 function Contact() {
     const { portfolioData } = useSelector((state) => state.root);
@@ -12,6 +14,8 @@ function Contact() {
 
     return (
         <div className='blck'>
+            <Google_srch />
+            {/* <Rough /> */}
             <SectionTittle title={"Contact"} />
 
             <div className='flex sm:flex-col items-center justify-between p-10'>
@@ -40,6 +44,8 @@ function Contact() {
                     ></dotlottie-player>
                 </div>
             </div>
+
+            
         </div>
     );
 }

@@ -8,7 +8,8 @@ function Courses() {
     // Set the default selected course to the first one (index 0)
     const [selectedItemIndex, setselectedItemIndex] = React.useState(0);
     const { portfolioData } = useSelector((state) => state.root);
-    const courses = portfolioData?.courses || {};
+    let courses = portfolioData?.courses || {};
+    courses = courses.slice().reverse();
 
     return (
         <div className='blck'>

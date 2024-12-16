@@ -1,16 +1,16 @@
 import React from 'react'
 import SectionTittle from '../components/SectionTittle'
-// import { projects } from '../resources/project';
 import { useSelector } from 'react-redux';
 import { FaGlobe, FaGithub } from "react-icons/fa";
-// import {  } from "react-icons/fa";
 
 function Projects() {
     // Set the default selected project to the first one (index 0)
     const [selectedItemIndex, setselectedItemIndex] = React.useState(0);
     const { portfolioData } = useSelector((state) => state.root);
-    const projects = portfolioData?.projects || {};
-    // const { technologies, title, description, image, discription, url } = projects;
+    let projects = portfolioData?.projects || [];
+
+    // Reverse the projects array
+    projects = projects.slice().reverse();
 
     return (
         <div className='blck'>
@@ -40,10 +40,9 @@ function Projects() {
                                 <p className='text-text text-sm ssm:text-sm ssm:text-center'>{projects[selectedItemIndex].description2}</p>
                                 <p className='text-tertiary text-sm ssm:text-sm ssm:text-center'>Technologies: {projects[selectedItemIndex].technologies.join(', ')}</p>
                                 <div className='flex items-center gap-3 flex-row'>
-                                    <a href={projects[selectedItemIndex].url} target="_blank" className='w-full bg-white py-2 pl-2 text-red-700 font-extrabold rounded-lg flex items-center gap-2 sm:text-xl text-sm border border-text' ><FaGlobe/> Live</a>
-                                    <a href={projects[selectedItemIndex].githubrepo} target="_blank" className='w-full bg-black text-white font-semibold py-2 pl-2 rounded-lg flex items-center gap-2 sm:text-xl text-sm border border-primary'><FaGithub />GitHub </a>
+                                    <a href={projects[selectedItemIndex].url} target="_blank" className='w-full bg-white py-2 pl-2 text-red-700 font-extrabold rounded-lg flex items-center gap-2 sm:text-xl text-sm border border-text' ><FaGlobe /> Live</a>
+                                    <a href={projects[selectedItemIndex].githubrepo} target="_blank" className='w-full bg-black text-white font-semibold py-2 pl-2 rounded-lg flex items-center gap-2 sm:text-xl text-sm border border-primary'><FaGithub />GitHub</a>
                                 </div>
-
                             </div>
                         </>
                     )}
@@ -53,4 +52,4 @@ function Projects() {
     )
 }
 
-export default Projects
+export default Projects;

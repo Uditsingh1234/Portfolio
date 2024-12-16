@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Form, message, Modal } from 'antd';
 import { HideLoading, ShowLoading, ReloadData } from '../../redux/rootSlice';
 import axios from 'axios';
-import { set } from 'mongoose';
+// import { set } from 'mongoose';
 // import { Course } from '../../../../models/portfolioModel';
 
 function AdminCourse() {
@@ -19,12 +19,12 @@ function AdminCourse() {
             dispatch(ShowLoading());
             let response;
             if (selectedItemForEdit) {
-                response = await axios.put("http://localhost:5000/api/portfolio/update-course", {
+                response = await axios.put(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/update-course`, {
                     ...values,
                     _id: selectedItemForEdit._id,
                 });
             } else {
-                response = await axios.post("http://localhost:5000/api/portfolio/add-course", values);
+                response = await axios.post(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/add-course`, values);
             }
 
             dispatch(HideLoading());

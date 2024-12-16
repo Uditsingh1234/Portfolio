@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import Header from '../../components/Header'
 import { Tabs } from 'antd';
+import { useSelector } from 'react-redux';
 import Adminintro from './Adminintro';
 import Adminabout from './Adminabout';
-import { useSelector } from 'react-redux';
 import Experiences from './AdminExperiences';
 import AdminProject from './AdminProject';
 import AdminCourse from './AdminCourse';

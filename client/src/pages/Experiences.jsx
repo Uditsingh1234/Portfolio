@@ -7,7 +7,9 @@ function Experiences() {
     const { portfolioData } = useSelector((state) => state.root);
 
     // Ensure experiences is defined before using it
-    const experiences = portfolioData?.experiences || [];
+    let experiences = portfolioData?.experiences || [];
+
+    experiences = experiences.slice().reverse();
 
     return (
         <div className='my-10 blck'>

@@ -22,12 +22,12 @@ function AdminProject() {
 
       let response;
       if (selectedItemForEdit) {
-        response = await axios.put("http://localhost:5000/api/portfolio/update-project", {
+        response = await axios.put(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/update-project`, {
           ...values,
           _id: selectedItemForEdit._id,
         });
       } else {
-        response = await axios.post("http://localhost:5000/api/portfolio/add-project", values);
+        response = await axios.post(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/add-project`, values);
       }
 
       dispatch(HideLoading());

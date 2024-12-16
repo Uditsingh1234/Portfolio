@@ -1,5 +1,4 @@
 import React from 'react';
-import Header from '../components/Header';
 import { useSelector } from 'react-redux';
 import { FaChevronRight } from "react-icons/fa";
 import LeftSider from './LeftSider';
@@ -14,6 +13,8 @@ function Intro() {
   const handleClick = () => {
     navigate('/hire-me');  // Navigates to the /hireme route
   };
+
+  
 
   return (
     <div className=' bg-primary flex flex-col items-start justify-center gap-8 py-10 mx-2 blck '>

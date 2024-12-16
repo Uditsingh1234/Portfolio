@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Form, message, Modal } from 'antd';
 import { HideLoading, ShowLoading, ReloadData } from '../../redux/rootSlice';
 import axios from 'axios';
-import { set } from 'mongoose';
+// import { set } from 'mongoose';
 
 function Experiences() {
     const dispatch = useDispatch();
@@ -18,12 +18,12 @@ function Experiences() {
             dispatch(ShowLoading());
             let response;
             if (selectedItemForEdit) {
-                response = await axios.put("http://localhost:5000/api/portfolio/update-experience", {
+                response = await axios.put(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/update-experience`, {
                     ...values,
                     _id: selectedItemForEdit._id,
                 });
             } else {
-                response = await axios.post("http://localhost:5000/api/portfolio/add-experience", values);
+                response = await axios.post(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/add-experience`, values);
             }
 
             dispatch(HideLoading());
