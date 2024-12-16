@@ -6,7 +6,10 @@ function Experiences() {
     const [selectedItemIndex, setselectedItemIndex] = React.useState(0);
     const { portfolioData } = useSelector((state) => state.root);
 
+<<<<<<< HEAD
     // Ensure experiences is defined before using it
+=======
+>>>>>>> 281f5c30d1661b30fb4a359282c01ae8033f2f85
     let experiences = portfolioData?.experiences || [];
 
     experiences = experiences.slice().reverse();

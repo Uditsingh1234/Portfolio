@@ -14,7 +14,10 @@ function Intro() {
     navigate('/hire-me');  // Navigates to the /hireme route
   };
 
+<<<<<<< HEAD
   
+=======
+>>>>>>> 281f5c30d1661b30fb4a359282c01ae8033f2f85
 
   return (
     <div className=' bg-primary flex flex-col items-start justify-center gap-8 py-10 mx-2 blck '>

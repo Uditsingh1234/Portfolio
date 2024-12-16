@@ -15,7 +15,10 @@ function AdminLogin() {
         e.preventDefault(); // Prevent default form submission behavior
         try {
             dispatch(ShowLoading());
+<<<<<<< HEAD
             // const response = await axios.post("http://localhost:5000/api/portfolio/admin-login", user);
+=======
+>>>>>>> 281f5c30d1661b30fb4a359282c01ae8033f2f85
             const response = await axios.post(`${import.meta.env.VITE_API_RENDER_LINK}/api/portfolio/admin-login`, user);
             dispatch(HideLoading());
             console.log("Logging in...");
