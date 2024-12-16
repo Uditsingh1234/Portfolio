@@ -15,9 +15,9 @@ function Home() {
   const { loading, portfolioData } = useSelector((state) => state.root)
   return (
     <div className='view' >
-        <Header/>
-        {portfolioData && (
-          <div className='bg-primary px-40 ssm:px-2 sm:px-5'>
+      <Header />
+      {portfolioData && (
+        <div className='bg-primary px-40 ssm:px-2 sm:px-5'>
           <Intro />
           <About />
           <Experiences />
@@ -26,8 +26,9 @@ function Home() {
           <Contact />
           <Footer />
           <LeftSider />
-          </div>
-        )}
+        </div>
+      )
+      }
     </div>
   )
 }
