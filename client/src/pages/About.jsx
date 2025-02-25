@@ -21,20 +21,22 @@ function About() {
                     </div>
                 </div>
 
-                <div className='py-10 blck'>
-                    <SectionTittle title="Skills" />
-                    <h1 className='text-tertiary text-xl ssm:text-center my-5'>Here are few technologies releted to my skills:</h1>
-                    <div className='flex flex-wrap gap-5 pt-5'>
-                        {
-                            skills.map((skills, index) => (
-                                <div className='border border-tertiary rounded-xl py-3 px-10 cursor-pointer glasss'>
-                                    <h1 className='text-tertiary '>{skills || " "}</h1>
-                                </div>
-                            ))
-                        }
-                    </div>
+
+            </div>
+            <div className='py-10 blck'>
+                <SectionTittle title="Skills" />
+                <h1 className='text-tertiary text-xl ssm:text-center my-5'>Here are few technologies releted to my skills:</h1>
+                <div className='flex flex-wrap gap-5 pt-5'>
+                    {
+                        skills.map((skills, index) => (
+                            <div className='border border-tertiary rounded-xl py-3 px-10 cursor-pointer glasss'>
+                                <h1 className='text-tertiary '>{skills || " "}</h1>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
-        </div> )}
+        </div>)
+}
 
 export default About
