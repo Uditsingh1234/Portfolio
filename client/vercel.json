@@ -3,11 +3,9 @@
     "build": [
         {
             "src": "*.js",
-            "use": "@vercel/node"
-        },
-         {
-  "buildCommand": "next build"
-}
+            "use": "@vercel/node",
+            "buildCommand": "next build"
+        }
     ],
    
     "routes": [
