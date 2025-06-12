@@ -20,7 +20,7 @@ function LeftSider() {
                     </div>
 
                     <div className="glower" onClick={()=>{
-                        window.open('https://www.linkedin.com/in/uditsingh12345', '_blank');
+                        window.open('https://www.linkedin.com/in/i-am-udit', '_blank');
                     }}>
                         <FaLinkedin />
                     </div>
