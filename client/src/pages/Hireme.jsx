@@ -45,7 +45,7 @@ function Hireme() {
             <div className="info">
               <div className="information flex my-3 items-center text-[0.95rem] text-text">
                 <FaHome />
-                <p className="ml-2">Tonk Phatak, Jaipur, Rajasthan</p>
+                <p className="ml-2">Jaipur, Rajasthan</p>
               </div>
               <div className="information flex my-3 items-center text-[0.95rem] text-text">
                 <MdEmail />
